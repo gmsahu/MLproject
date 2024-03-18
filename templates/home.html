@@ -1,0 +1,59 @@
+<html>
+<body>
+    
+       <h1>Student's Chance of Admission metrics</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        
+                
+        </div>
+        <div class="mb-3">
+            <label class="form-label">GRE Score out of 500</label>
+            <input class="form-control" type="number" name="gre_score"
+                placeholder="Enter your GRE score" min='0' max='500' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">TOEFL Score out of 500</label>
+            <input class="form-control" type="number" name="toefl_score"
+                placeholder="Enter your TOEFL Score" min='0' max='500' />
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">University Rating out of 10</label>
+            <input class="form-control" type="number" name="university_rating"
+                placeholder="Enter University Rating " min='0' max='10' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">SOP out of 10</label>
+            <input class="form-control" type="number" name="sop"
+                placeholder="Enter your SOP Score" min='0' max='10' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">LOR</label>
+            <input class="form-control" type="number" name="lor"
+                placeholder="Enter  LOR" min='0' max='10' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">CGPA out of 10</label>
+            <input class="form-control" type="number" name="cgpa"
+                placeholder="Enter your CGPA" min='0' max='10' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Research out of 10</label>
+            <input class="form-control" type="number" name="research"
+                placeholder="Enter Reasearch Score" min='0' max='10' />
+        </div>
+
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict your Chance of Admission " required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>
