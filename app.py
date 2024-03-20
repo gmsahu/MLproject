@@ -21,7 +21,7 @@ def predict_datapoint():
         return render_template('home.html')
     else:
         data=CustomData(
-             gre_score=float(request.form.get('gre_score')),
+            gre_score=float(request.form.get('gre_score')),
             toefl_score=float(request.form.get('toefl_score')),
             university_rating=float(request.form.get('university_rating')),
             sop=float(request.form.get('sop')),
@@ -38,7 +38,7 @@ def predict_datapoint():
         print("Mid Prediction")
         results=predict_pipeline.predict(pred_df)
         print("after Prediction")
-        return render_template('home.html',results=results[0])
+        return render_template('home.html',results=format(results[0],'.2f'))
     
     
 
